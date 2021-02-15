@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind config -->
+    <link rel="stylesheet" href="../../../public/css/tailwind.css">
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-r from-primary-light to-primary-dark overflow-x-hidden">
+
+    <!-- navbar -->
+<nav id="navbar" class="flex justify-between items-center px-10 lg:px-24 py-4 lg:py-10 lg:shadow-none relative z-30 transition-shadow">
+    <!-- logo navbar -->
+    <img src="../../../assets/logo/logo.svg" class="w-16" alt="">
+
+    <div class="lg:flex items-center space-x-12 hidden">
+        <!-- navbar menu -->
+        <div id="navbar-menu" class="flex space-x-6">
+            <a href="../../../index.html" class="text-gray-50 text-opacity-60">Home</a>
+            <!-- tools dropdown -->
+            <div id="tools" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                <span class="" class="">Tools</span>
+                <!-- arrow icon -->
+                <svg class="w-6 h-6 text-gray-50 text-opacity-60" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                <!-- dropdown -->
+                <div id="tools-dropdown" class="absolute -bottom-28 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                    <a href="../tools-cli/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Cli</a>
+                    <a href="../tools-web/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Web</a>
+                </div>
+            </div>
+            <a href="" class="text-gray-50 text-opacity-60">Blog</a>
+            <a href="" class="text-gray-50 font-medium">Contact</a>
+            <!-- join dropdown -->
+            <div id="join-grup" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                <span class="">Join grup</span>
+                <!-- arrow icon -->
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                <!-- dropdown -->
+                <div id="join-dropdown" class="absolute -bottom-40 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                    <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Whatsapp</a>
+                    <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Telegram</a>
+                    <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Discord</a>
+                </div>
+            </div>
+        </div>
+        <!-- login icon -->
+        <div class="relative">
+            <img id="profil" src="../../../assets/icons/user.svg" class="w-8 cursor-pointer" alt="">
+            <div id="profil-dropdown" class="absolute bg-gray-100 rounded-sm -right-2 mt-2 py-4 w-40 invisible z-10 px-2 flex flex-col space-y-1r">
+                <div class="h-14 w-14 rounded-full bg-secondary-orange mx-auto cursor-pointer"></div>
+                <span class="text-sm text-primary-dark text-opacity-80 text-center">Signed as</span>
+                <span class="font-medium text-primary-dark pb-2 text-center">Hairul wardy</span>
+                <hr class="w-full mt-2 pt-1">
+                <a href="" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Profil</a>
+                <a href="../../sign/login/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Login</a>
+                <a href="../../sign/signup/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- responsive hamburger menu -->
+    <div id="reponsive-btn" class=" lg:hidden">
+        <!-- hamburger -->
+        <svg id="hamburger-menu" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+
+        <!-- close -->
+        <svg id="close" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </div>
+    <!-- end hamburger menu -->
+</nav>
+<!-- end navbar -->
+
+<!-- responsive navbar -->
+<div id="responsive-menu" class="lg:invisible h-5/6 w-full absolute z-20 top-6 transform -translate-y-1/4 opacity-0 transition-all ease-in flex justify-center items-center shadow-xl invisible">
+    <div class="flex flex-col text-center space-y-6 text-gray-100">
+        <a href="" class="font-medium hover:opacity-60">Home</a>
+        <div class="flex flex-col space-y-2">
+            <a href="" class="hover:opacity-60">Tools</a>
+            <!-- sub menu -->
+            <div id="" class="ml-16 flex flex-col space-y-3">
+                <a href="" class="hover:opacity-60">Tools CLI</a>
+                <a href="" class="hover:opacity-60">Tools web</a>
+            </div>
+
+            
+        </div>
+        <a href="" class="hover:opacity-60">Blog</a>
+        <a href="" class="hover:opacity-60">Contact</a>
+        <div class="flex flex-col space-y-2">
+            <a href="" class="hover:opacity-60">Join grup</a>
+            <!-- sub menu -->
+            <div id="" class="ml-16 flex flex-col space-y-3">
+                <a href="" class="hover:opacity-60">Whatsapp</a>
+                <a href="" class="hover:opacity-60">Telegram</a>
+                <a href="" class="hover:opacity-60">Discord</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end responsive navbar -->
+
+<!-- contact -->
+<section class="mt-10">
+    <h2 class="text-center text-4xl font-semibold text-gray-100 text-opacity-90">Contact <span class="text-secondary-lightblue font-bold">Us</span></h2>
+
+    <!-- card contact -->
+    <div class="flex flex-col space-y-4 lg:flex-row lg:space-y-0 justify-evenly mt-20 px-10 lg:px-24">
+        <!-- col -->
+        <div class="bg-primary-light shadow-xl p-8 rounded-md ">
+            <div class="mx-auto">
+                <img src="../../../assets/images/blog-images/artikel-1.png" class="rounded-full mx-auto w-24" alt="">
+            </div>
+            <!-- title col -->
+            <div class="text-center">
+                <h3 class="font-semibold text-gray-300 text-xl mt-4">Osyi cozy</h3>
+                <h5 class="mt-2 text-sm text-gray-400">as</h5>
+                <p class="mt-2 text-gray-300">Software enginer</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="../profil/index.html">
+                    <button class="py-2 px-4 bg-secondary-orange hover:bg-secondary-darkorange transition-color rounded-md text-gray-300 shadow-md">Detail profil</button>
+                </a>
+                <button class="py-2 px-4 bg-secondary-orange hover:bg-secondary-darkorange transition-color rounded-md text-gray-300 shadow-md">Contact me</button>
+            </div>
+        </div>
+        <!-- col -->
+        <div class="bg-primary-light shadow-xl p-8 rounded-md">
+            <div class="mx-auto">
+                <img src="../../../assets/images/blog-images/artikel-1.png" class="rounded-full mx-auto w-24" alt="">
+            </div>
+            <!-- title col -->
+            <div class="text-center">
+                <h3 class="font-semibold text-gray-300 text-xl mt-4">Osyi cozy</h3>
+                <h5 class="mt-2 text-sm text-gray-400">as</h5>
+                <p class="mt-2 text-gray-300">Software enginer</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <button class="py-2 px-4 bg-secondary-orange hover:bg-secondary-darkorange transition-color rounded-md text-gray-300 shadow-md">Detail profil</button>
+                <button class="py-2 px-4 bg-secondary-orange hover:bg-secondary-darkorange transition-color rounded-md text-gray-300 shadow-md">Contact me</button>
+            </div>
+        </div>
+        <!-- col -->
+        <!-- col -->
+        <div class="bg-primary-light shadow-xl p-8 rounded-md">
+            <div class="mx-auto">
+                <img src="../../../assets/images/blog-images/artikel-1.png" class="rounded-full mx-auto w-24" alt="">
+            </div>
+            <!-- title col -->
+            <div class="text-center">
+                <h3 class="font-semibold text-gray-300 text-xl mt-4">Osyi cozy</h3>
+                <h5 class="mt-2 text-sm text-gray-400">as</h5>
+                <p class="mt-2 text-gray-300">Software enginer</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <button class="py-2 px-4 bg-secondary-orange hover:bg-secondary-darkorange transition-color rounded-md text-gray-300 shadow-md">Detail profil</button>
+                <button class="py-2 px-4 bg-secondary-orange hover:bg-secondary-darkorange transition-color rounded-md text-gray-300 shadow-md">Contact me</button>
+            </div>
+        </div>
+        <!-- col -->
+    </div>
+</section>
+<!-- end contact -->
+<!-- script -->
+<script src="./script.js"></script>
+</body>
+</html>

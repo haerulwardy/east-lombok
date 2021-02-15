@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./public/css/tailwind.css">
+    <title>Welcome to Eastlombok</title>
+</head>
+<body class="bg-gradient-to-br from-primary-light to-primary-dark overflow-x-hidden">
+
+    <!-- navbar -->
+    <nav id="navbar" class="flex justify-between items-center px-10 lg:px-24 py-4 lg:py-10 lg:shadow-none relative z-30 transition-shadow">
+        <!-- logo navbar -->
+        <img src="./assets/logo/logo.svg" class="w-16" alt="">
+
+        <div class="lg:flex items-center space-x-12 hidden">
+            <!-- navbar menu -->
+            <div id="navbar-menu" class="flex space-x-6">
+                <a href="./index.html" class="text-gray-50 font-medium">Home</a>
+                <!-- tools dropdown -->
+                <div id="tools" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                    <span class="">Tools</span>
+                    <!-- arrow icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                    <!-- dropdown -->
+                    <div id="tools-dropdown" class="absolute -bottom-28 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                        <a href="./pages/user/tools-cli/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Cli</a>
+                        <a href="./pages/user/tools-web/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Web</a>
+                    </div>
+                </div>
+                <a href="./pages/user/blog/index.html" class="text-gray-50 text-opacity-60">Blog</a>
+                <a href="./pages/user/contact/index.html" class="text-gray-50 text-opacity-60">Contact</a>
+                <!-- join dropdown -->
+                <div id="join-grup" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                    <span class="">Join grup</span>
+                    <!-- arrow icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                    <!-- dropdown -->
+                    <div id="join-dropdown" class="absolute -bottom-40 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Whatsapp</a>
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Telegram</a>
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <!-- login icon -->
+            <div class="relative">
+                <img id="profil" src="./assets/icons/user.svg" class="w-8 cursor-pointer" alt="">
+                <div id="profil-dropdown" class="absolute bg-gray-100 rounded-sm -right-2 mt-2 py-4 w-40 invisible z-10 px-2 flex flex-col space-y-1r">
+                    <div class="h-14 w-14 rounded-full bg-secondary-orange mx-auto cursor-pointer"></div>
+                    <span class="text-sm text-primary-dark text-opacity-80 text-center mt-4">Signed as</span>
+                    <span class="font-medium text-primary-dark pb-2 text-center">Hairul wardy</span>
+                    <hr class="w-full mt-2 pt-1">
+                    <a href="./pages/user/profil/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Profil</a>
+                    <a href="./pages/sign/login/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Login</a>
+                    <a href="./pages/sign/signup/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Sign up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- responsive hamburger menu -->
+        <div id="reponsive-btn" class=" lg:hidden">
+            <!-- hamburger -->
+            <svg id="hamburger-menu" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+
+            <!-- close -->
+            <svg id="close" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </div>
+        <!-- end hamburger menu -->
+    </nav>
+    <!-- end navbar -->
+
+    <!-- responsive navbar -->
+    <div id="responsive-menu" class="lg:invisible h-5/6 w-full bg-gradient-to-br from-primary-light to-primary-dark absolute z-20 top-6 transform -translate-y-1/4 opacity-0 transition-all ease-in flex justify-center items-center invisible">
+        <div class="flex flex-col text-center space-y-6 text-gray-100">
+            <a href="./index.html" class="font-medium hover:opacity-60">Home</a>
+            <div class="flex flex-col space-y-2">
+                <a href="" class="hover:opacity-60">Tools</a>
+                <!-- sub menu -->
+                <div class="ml-16 flex flex-col space-y-3">
+                    <a href="./pages/user/tools-cli/index.html" class="hover:opacity-60">Tools CLI</a>
+                    <a href="./pages/user/tools-web/index.html" class="hover:opacity-60">Tools web</a>
+                </div>
+
+                
+            </div>
+            <a href="./pages/user/blog/index.html" class="hover:opacity-60">Blog</a>
+            <a href="./pages/user/contact/index.html" class="hover:opacity-60">Contact</a>
+            <div class="flex flex-col space-y-2">
+                <a href="" class="hover:opacity-60">Join grup</a>
+                <!-- sub menu -->
+                <div id="" class="ml-16 flex flex-col space-y-3">
+                    <a href="" class="hover:opacity-60">Whatsapp</a>
+                    <a href="" class="hover:opacity-60">Telegram</a>
+                    <a href="" class="hover:opacity-60">Discord</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end responsive navbar -->
+
+    <!-- hero section -->
+    <section class="flex justify-center lg:justify-between px-10 lg:pl-24 mb-24 lg:mb-0">
+        <!-- title hero -->
+        <div class="mt-10 lg:mt-20 text-center lg:text-left">
+            <!-- heading -->
+            <h1 class="font-semibold text-gray-50 text-5xl">Welcome to the <span class="text-secondary-lightblue font-extrabold">Eastlombok</span> checker</h1>
+            <!-- paragraph -->
+            <p class="mt-6 text-gray-300">
+                Eastlombok checker is free bot provider to make your job easier we have provided various tools, and you can request the tool you want as long as we can help you, so what are you waiting for join us
+            </p>
+            <!-- button -->
+            <div class="flex mt-8 space-x-4">
+                <!-- documentation -->
+                <button class="flex space-x-2 bg-secondary-orange hover:bg-secondary-darkorange py-3 px-6 rounded-sm">
+                    <svg class="w-6 h-6 text-gray-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>
+                    <span class="text-gray-200 font-medium">Documentation</span>
+                </button>
+                <!-- youtube link -->
+                <button class="flex space-x-2 bg-secondary-orange hover:bg-secondary-darkorange py-3 px-6 rounded-sm">
+                    <svg class="w-6 h-6 text-gray-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                    <span class="text-gray-100 font-medium">See on Youtube</span>
+                </button>
+            </div>
+        </div>
+        <!-- image -->
+        <img src="./assets/images/3d-illustration.svg" class="hidden lg:block w-2/3 relative -right-20 -top-10" alt="">
+    </section>
+    <!-- end hero -->
+
+    <!-- List bot section -->
+    <section class="bg-primary-light py-20 lg:py-40 px-10 lg:px-24 relative">
+        <!-- backgroun-1 -->
+        <img src="./assets/background/kotak-3d.svg" class="hidden lg:block absolute left-16 -top-36 w-56" alt="">
+        <img src="./assets/background/lingkaran-3d.svg" class="absolute top-40 -right-6" alt="">
+        <img src="./assets/background/dounat-3d.svg" class="absolute -bottom-20 -left-8" alt="">
+        <!-- heading title -->
+        <h2 class="text-center text-4xl font-semibold text-gray-100 text-opacity-90">Eastlombok <span class="text-secondary-lightblue font-bold">List bot</span></h2>
+
+        <!-- grid card -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 mt-14 lg:mt-20 gap-4 lg:gap-10">
+            <!-- col 1 -->
+            <a href="">
+                <div class="flex items-center space-x-6 bg-primary-dark rounded-md px-6 py-8 shadow-2xl relative">
+                    
+                    <!-- icon -->
+                    <img src="./assets/icons/placeholder.svg" class="w-16" alt="">
+                    <!-- title card -->
+                    <div>
+                        <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">Laravel</h5>
+                        <span class="text-gray-400">Lorem Ipsum is dummy text.</span>
+                    </div>
+                </div>
+            </a>
+            <!-- col 2 -->
+            <a href="">
+                <div class="flex items-center space-x-6 bg-primary-dark rounded-md px-6 py-8 shadow-2xl relative">
+                    
+                    <!-- icon -->
+                    <img src="./assets/icons/icon-2.svg" class="w-16" alt="">
+                    <!-- title card -->
+                    <div>
+                        <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">React Js</h5>
+                        <span class="text-gray-400">Lorem Ipsum is dummy text.</span>
+                    </div>
+                </div>
+            </a>
+            <!-- col 3 -->
+            <a href="">
+                <div class="flex items-center space-x-6 bg-primary-dark rounded-md px-6 py-8 shadow-2xl relative">
+                    
+                    <!-- icon -->
+                    <img src="./assets/icons/icon-3.svg" class="w-16" alt="">
+                    <!-- title card -->
+                    <div>
+                        <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">Vue Js</h5>
+                        <span class="text-gray-400">Lorem Ipsum is dummy text.</span>
+                    </div>
+                </div>
+            </a>
+            <!-- col 4 -->
+            <a href="">
+                <div class="flex items-center space-x-6 bg-primary-dark rounded-md px-6 py-8 shadow-2xl relative">
+                    
+                    <!-- icon -->
+                    <img src="./assets/icons/icon-4.svg" class="w-16" alt="">
+                    <!-- title card -->
+                    <div>
+                        <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">Tailwind Css</h5>
+                        <span class="text-gray-400">Lorem Ipsum is dummy text.</span>
+                    </div>
+                </div>
+            </a>
+            <!-- col 5 -->
+            <a href="">
+                <div class="flex items-center space-x-6 bg-primary-dark rounded-md px-6 py-8 shadow-2xl relative">
+                    
+                    <!-- icon -->
+                    <img src="./assets/icons/icon-5.svg" class="w-16" alt="">
+                    <!-- title card -->
+                    <div>
+                        <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">Bootstrap</h5>
+                        <span class="text-gray-400">Lorem Ipsum is dummy text.</span>
+                    </div>
+                </div>
+            </a>
+            <!-- col 6 -->
+            <a href="">
+                <div class="flex items-center space-x-6 bg-primary-dark rounded-md px-6 py-8 shadow-2xl relative">
+                    
+                    <!-- icon -->
+                    <img src="./assets/icons/placeholder.svg" class="w-16" alt="">
+                    <!-- title card -->
+                    <div>
+                        <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">Code Igniter</h5>
+                        <span class="text-gray-400">Lorem Ipsum is dummy text.</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- end list bot -->
+
+    <!-- team section -->
+    <section class="py-20 px-10 lg:py-40 relative">
+        <!-- background 2 -->
+        <img src="./assets/background/long-shape.svg" class="hidden lg:block absolute top-64 -left-10" alt="">
+        <img src="./assets/background/column-shape.svg" class="hidden lg:block absolute -bottom-36 -right-4" alt="">
+        <!-- heading title -->
+        <h2 class="text-center text-4xl font-semibold text-gray-100 text-opacity-90">Our <span class="text-secondary-lightblue font-bold">Team</span></h2>
+
+        <div class="flex flex-col lg:flex-row lg:space-x-8 mt-24 justify-center">
+            <!-- card 1 -->
+            <div class="bg-primary-light px-16 pb-10 rounded-md shadow-2xl">
+                <!-- image -->
+                <div class="img h-28 w-28 bg-gray-400 rounded-full -mt-14 mx-auto"></div>
+                <!-- title team -->
+                <div class="mt-4 text-center">
+                    <h5 class="font-semibold text-xl text-gray-100 text-opacity-80">Osi</h5>
+                    <span class="text-gray-400">Web developer</span>
+                </div>
+                <!-- social media -->
+                <div class="flex justify-center bg-primary-dark shadow-lg py-2 px-4 mt-6 rounded-sm space-x-4">
+                    <img src="./assets/icons/facebook.svg" class="rounded-full" alt="">
+                    <img src="./assets/icons/instagram.svg" class="rounded-full" alt="">
+                    <img src="./assets/icons/behance.svg" class="rounded-full" alt="">
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="bg-primary-light px-16 pb-10 rounded-md shadow-2xl mt-32 lg:mt-0">
+                <!-- image -->
+                <div class="img h-28 w-28 bg-gray-400 rounded-full -mt-14 mx-auto"></div>
+                <!-- title team -->
+                <div class="mt-4 text-center">
+                    <h5 class="font-semibold text-xl text-gray-100 text-opacity-80"Osi</h5>
+                    <span class="text-gray-400">Web developer</span>
+                </div>
+                <!-- social media -->
+                <div class="flex justify-center bg-primary-dark shadow-lg py-2 px-4 mt-6 rounded-sm space-x-4">
+                    <img src="./assets/icons/facebook.svg" class="rounded-full" alt="">
+                    <img src="./assets/icons/instagram.svg" class="rounded-full" alt="">
+                    <img src="./assets/icons/behance.svg" class="rounded-full" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end team -->
+
+    <!-- footer -->
+    <footer class="bg-primary-footer p-16 flex flex-col justify-center items-center space-y-4">
+        <!-- social media -->
+        <div class="flex space-x-4">
+            <img src="./assets/icons/facebook.svg" class="rounded-full" alt="">
+            <img src="./assets/icons/instagram.svg" class="rounded-full" alt="">
+            <img src="./assets/icons/behance.svg" class="rounded-full" alt="">
+        </div>
+
+        <!-- menu bar -->
+        <div class="flex text-gray-400 space-x-4">
+            <a href="./index.html">Home</a>
+            <a href="" >Tools</a>
+            <a href="./pages/user/blog/index.html">Blog</a>
+            <a href="./pages/user/contact/index.html">Contact</a>
+            <a href="">Join grup</a>
+        </div>
+        <!-- copyright -->
+        <span class="text-gray-300">&copy;Easlombok | Made with ❤️ </span>
+    </footer>
+    <!-- end footer -->
+
+    <!-- javascript -->
+    <script src="./src/js/script.js"></script>
+</body>
+</html>

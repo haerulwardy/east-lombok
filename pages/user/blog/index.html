@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind config -->
+    <link rel="stylesheet" href="../../../public/css/tailwind.css">
+    <title>Blog</title>
+</head>
+<body class="bg-gradient-to-r from-primary-light to-primary-dark overflow-x-hidden">
+
+    <!-- navbar -->
+    <nav id="navbar" class="flex justify-between items-center px-10 lg:px-24 py-4 lg:py-10 lg:shadow-none relative z-30 transition-shadow">
+        <!-- logo navbar -->
+        <img src="../../../assets/logo/logo.svg" class="w-16" alt="">
+
+        <div class="lg:flex items-center space-x-12 hidden">
+            <!-- navbar menu -->
+            <div id="navbar-menu" class="flex space-x-6">
+                <a href="../../../index.html" class="text-gray-50 text-opacity-60">Home</a>
+                <!-- tools dropdown -->
+                <div id="tools" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                    <span class="" class="">Tools</span>
+                    <!-- arrow icon -->
+                    <svg class="w-6 h-6 text-gray-50 text-opacity-60" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                    <!-- dropdown -->
+                    <div id="tools-dropdown" class="absolute -bottom-28 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                        <a href="../tools-cli/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Cli</a>
+                        <a href="../tools-web/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Web</a>
+                    </div>
+                </div>
+                <a href="" class="text-gray-50 font-medium">Blog</a>
+                <a href="" class="text-gray-50 text-opacity-60">Contact</a>
+                <!-- join dropdown -->
+                <div id="join-grup" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                    <span class="">Join grup</span>
+                    <!-- arrow icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                    <!-- dropdown -->
+                    <div id="join-dropdown" class="absolute -bottom-40 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Whatsapp</a>
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Telegram</a>
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <!-- login icon -->
+            <div class="relative">
+                <img id="profil" src="../../../assets/icons/user.svg" class="w-8 cursor-pointer" alt="">
+                <div id="profil-dropdown" class="absolute bg-gray-100 rounded-sm -right-2 mt-2 py-4 w-40 invisible z-10 px-2 flex flex-col space-y-1r">
+                    <div class="h-14 w-14 rounded-full bg-secondary-orange mx-auto cursor-pointer"></div>
+                    <span class="text-sm text-primary-dark text-opacity-80 text-center">Signed as</span>
+                    <span class="font-medium text-primary-dark pb-2 text-center">Hairul wardy</span>
+                    <hr class="w-full mt-2 pt-1">
+                    <a href="" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Profil</a>
+                    <a href="../../sign/login/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Login</a>
+                    <a href="../../sign/signup/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Sign up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- responsive hamburger menu -->
+        <div id="reponsive-btn" class=" lg:hidden">
+            <!-- hamburger -->
+            <svg id="hamburger-menu" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+
+            <!-- close -->
+            <svg id="close" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </div>
+        <!-- end hamburger menu -->
+    </nav>
+    <!-- end navbar -->
+
+    <!-- responsive navbar -->
+    <div id="responsive-menu" class="lg:invisible h-5/6 w-full absolute z-20 top-6 transform -translate-y-1/4 opacity-0 transition-all ease-in flex justify-center items-center shadow-xl invisible">
+        <div class="flex flex-col text-center space-y-6 text-gray-100">
+            <a href="" class="font-medium hover:opacity-60">Home</a>
+            <div class="flex flex-col space-y-2">
+                <a href="" class="hover:opacity-60">Tools</a>
+                <!-- sub menu -->
+                <div id="" class="ml-16 flex flex-col space-y-3">
+                    <a href="" class="hover:opacity-60">Tools CLI</a>
+                    <a href="" class="hover:opacity-60">Tools web</a>
+                </div>
+
+                
+            </div>
+            <a href="" class="hover:opacity-60">Blog</a>
+            <a href="" class="hover:opacity-60">Contact</a>
+            <div class="flex flex-col space-y-2">
+                <a href="" class="hover:opacity-60">Join grup</a>
+                <!-- sub menu -->
+                <div id="" class="ml-16 flex flex-col space-y-3">
+                    <a href="" class="hover:opacity-60">Whatsapp</a>
+                    <a href="" class="hover:opacity-60">Telegram</a>
+                    <a href="" class="hover:opacity-60">Discord</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end responsive navbar -->
+
+    <!-- blog card -->
+    <section class="mt-10  lg:px-24 px-10">
+        <!-- blog title -->
+        <h2 class="text-center text-4xl font-semibold text-gray-100 text-opacity-90">Blog <span class="text-secondary-lightblue font-bold">Eastlombok</span></h2>
+
+        <!-- blog card -->
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-8 mt-16">
+            <!-- col-1 -->
+            <a href="./detail-blog/index.html">
+                <div class="p-6 bg-primary-light rounded-xl shadow-xl">
+                    <img src="../../../assets/images/blog-images/blog-1.png" alt="">
+                    <!-- title col -->
+                    <div class="mt-6">
+                        <!-- heading tile -->
+                        <h5 class="text-gray-200 font-semibold text-xl">Tutorial Codeigniter 4: Migrasi Database</h5>
+                        <!-- paragraph title -->
+                        <p class="text-gray-400 mt-2">Pelajari cara migrasi database di Codeigniter 4 agar project-mu bisa cepat selesai tanpa hambatan …</p>
+                    </div>
+                </div>
+            </a>
+            <!-- end col -->
+
+            <!-- col-1 -->
+            <a href="">
+                <div class="p-6 bg-primary-light rounded-xl shadow-xl">
+                    <img src="../../../assets/images/blog-images/blog-1.png" alt="">
+                    <!-- title col -->
+                    <div class="mt-6">
+                        <!-- heading tile -->
+                        <h5 class="text-gray-200 font-semibold text-xl">Tutorial Codeigniter 4: Migrasi Database</h5>
+                        <!-- paragraph title -->
+                        <p class="text-gray-400 mt-2">Pelajari cara migrasi database di Codeigniter 4 agar project-mu bisa cepat selesai tanpa hambatan …</p>
+                    </div>
+                </div>
+            </a>
+            <!-- end col -->
+            <!-- col-1 -->
+            <a href="">
+                <div class="p-6 bg-primary-light rounded-xl shadow-xl">
+                    <img src="../../../assets/images/blog-images/blog-1.png" alt="">
+                    <!-- title col -->
+                    <div class="mt-6">
+                        <!-- heading tile -->
+                        <h5 class="text-gray-200 font-semibold text-xl">Tutorial Codeigniter 4: Migrasi Database</h5>
+                        <!-- paragraph title -->
+                        <p class="text-gray-400 mt-2">Pelajari cara migrasi database di Codeigniter 4 agar project-mu bisa cepat selesai tanpa hambatan …</p>
+                    </div>
+                </div>
+            </a>
+            <!-- end col -->
+            <!-- col-1 -->
+            <a href="">
+                <div class="p-6 bg-primary-light rounded-xl shadow-xl">
+                    <img src="../../../assets/images/blog-images/blog-1.png" alt="">
+                    <!-- title col -->
+                    <div class="mt-6">
+                        <!-- heading tile -->
+                        <h5 class="text-gray-200 font-semibold text-xl">Tutorial Codeigniter 4: Migrasi Database</h5>
+                        <!-- paragraph title -->
+                        <p class="text-gray-400 mt-2">Pelajari cara migrasi database di Codeigniter 4 agar project-mu bisa cepat selesai tanpa hambatan …</p>
+                    </div>
+                </div>
+            </a>
+            <!-- end col -->
+            <!-- col-1 -->
+            <a href="">
+                <div class="p-6 bg-primary-light rounded-xl shadow-xl">
+                    <img src="../../../assets/images/blog-images/blog-1.png" alt="">
+                    <!-- title col -->
+                    <div class="mt-6">
+                        <!-- heading tile -->
+                        <h5 class="text-gray-200 font-semibold text-xl">Tutorial Codeigniter 4: Migrasi Database</h5>
+                        <!-- paragraph title -->
+                        <p class="text-gray-400 mt-2">Pelajari cara migrasi database di Codeigniter 4 agar project-mu bisa cepat selesai tanpa hambatan …</p>
+                    </div>
+                </div>
+            </a>
+            <!-- end col -->
+            <!-- col-1 -->
+            <a href="">
+                <div class="p-6 bg-primary-light rounded-xl shadow-xl">
+                    <img src="../../../assets/images/blog-images/blog-1.png" alt="">
+                    <!-- title col -->
+                    <div class="mt-6">
+                        <!-- heading tile -->
+                        <h5 class="text-gray-200 font-semibold text-xl">Tutorial Codeigniter 4: Migrasi Database</h5>
+                        <!-- paragraph title -->
+                        <p class="text-gray-400 mt-2">Pelajari cara migrasi database di Codeigniter 4 agar project-mu bisa cepat selesai tanpa hambatan …</p>
+                    </div>
+                </div>
+            </a>
+            <!-- end col -->
+        </div>
+
+        <!-- pagination -->
+        <div class="bg-primary-dark flex justify-between w-full lg:w-3/12 py-4 px-3 rounded-md mt-10">
+            <!-- arrow left -->
+            <span>
+                <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </span>
+            <!-- number -->
+            <div class="px-8">
+                <span class="p-4 font-medium text-gray-300">1</span>
+                <span class="p-4 font-medium text-gray-400">2</span>
+                <span class="p-4 font-medium text-gray-400">3</span>
+            </div>
+            <!-- arrow right -->
+            <span>
+                <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </span>
+        </div>
+    </section>
+    <!-- end blog card -->
+
+    <!-- section newslater -->
+    <section class="bg-primary-light flex relative lg:px-24 px-10 py-24 mt-40">
+        <!-- form -->
+        <div>
+            <!-- title form -->
+            <div class="lg:w-3/5 text-center lg:text-left">
+                <h5 class="text-xl text-gray-200 font-semibold">📧Newsletter..</h5>
+                <p class="text-gray-300 mt-2">Dapatkan informasi terbaru dari Eastlombok dengan berlangganan Newsletter</p>
+            </div>
+            <!-- forms -->
+            <form action="" class="mt-10">
+                <div class="flex flex-col">
+                    <label for="Nama" class="font-normal cursor-pointer text-secondary-lightblue">Nama</label>
+                    <input type="text" id="Nama" placeholder="Nama" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-300">
+                </div>
+                <div class="flex flex-col mt-4">
+                    <label for="email" class="font-normal cursor-pointer text-secondary-lightblue">Email</label>
+                    <input type="text" id="email" placeholder="email" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-300">
+                </div>
+                <!-- submit -->
+                <button class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-300 hover:text-gray-400 font-medium w-full">Register</button>
+            </form>
+        </div>
+        <!-- image -->
+        <img src="../../../assets/images/3d-illustration.svg" class="absolute -right-40 -top-36 lg:block hidden" alt="">
+    </section>
+    <!-- end newlater -->
+
+    <!-- footer -->
+    <footer class="bg-primary-footer p-16 flex flex-col justify-center items-center space-y-4 relative z-10">
+        <!-- social media -->
+        <div class="flex space-x-4">
+            <img src="./assets/icons/facebook.svg" class="rounded-full" alt="">
+            <img src="./assets/icons/instagram.svg" class="rounded-full" alt="">
+            <img src="./assets/icons/behance.svg" class="rounded-full" alt="">
+        </div>
+
+        <!-- menu bar -->
+        <div class="flex text-gray-400 space-x-4">
+            <a href="">Home</a>
+            <a href="" >Tools</a>
+            <a href="./pages/user/blog/index.html">Blog</a>
+            <a href="">Contact</a>
+            <a href="">Join grup</a>
+        </div>
+        <!-- copyright -->
+        <span class="text-gray-300">&copy;Easlombok | Made with ❤️ </span>
+    </footer>
+    <!-- end footer -->
+
+    <!-- script -->
+    <script src="./script.js"></script>
+    <!-- end script -->
+    
+</body>
+</html>

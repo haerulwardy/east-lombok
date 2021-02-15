@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind config -->
+    <link rel="stylesheet" href="../../../../public/css/tailwind.css">
+    <title>Detail blog</title>
+</head>
+<body class="bg-gradient-to-r from-primary-light to-primary-dark overflow-x-hidden">
+
+    <!-- navbar -->
+    <nav id="navbar" class="flex justify-between items-center px-10 lg:px-24 py-4 lg:py-10 lg:shadow-none relative z-30 transition-shadow">
+        <!-- logo navbar -->
+        <img src="../../../../assets/logo/logo.svg" class="w-16" alt="">
+
+        <div class="lg:flex items-center space-x-12 hidden">
+            <!-- navbar menu -->
+            <div id="navbar-menu" class="flex space-x-6">
+                <a href="../../../../index.html" class="text-gray-50 text-opacity-60">Home</a>
+                <!-- tools dropdown -->
+                <div id="tools" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                    <span class="" class="">Tools</span>
+                    <!-- arrow icon -->
+                    <svg class="w-6 h-6 text-gray-50 text-opacity-60" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                    <!-- dropdown -->
+                    <div id="tools-dropdown" class="absolute -bottom-28 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                        <a href="../tools-cli/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Cli</a>
+                        <a href="../tools-web/index.html" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Tools Web</a>
+                    </div>
+                </div>
+                <a href="" class="text-gray-50 font-medium">Blog</a>
+                <a href="" class="text-gray-50 text-opacity-60">Contact</a>
+                <!-- join dropdown -->
+                <div id="join-grup" class="text-gray-50 text-opacity-60 relative flex items-center space-x-1 cursor-pointer">
+                    <span class="">Join grup</span>
+                    <!-- arrow icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+
+                    <!-- dropdown -->
+                    <div id="join-dropdown" class="absolute -bottom-40 left-0 bg-gray-100 w-36 px-2 py-2 flex flex-col space-y-1 z-10 rounded-sm invisible">
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Whatsapp</a>
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Telegram</a>
+                        <a href="" class="rounded-sm text-primary-dark font-medium hover:bg-secondary-lightblue p-2">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <!-- login icon -->
+            <div class="relative">
+                <img id="profil" src="../../../assets/icons/user.svg" class="w-8 cursor-pointer" alt="">
+                <div id="profil-dropdown" class="absolute bg-gray-100 rounded-sm -right-2 mt-2 py-4 w-40 invisible z-10 px-2 flex flex-col space-y-1r">
+                    <div class="h-14 w-14 rounded-full bg-secondary-orange mx-auto cursor-pointer"></div>
+                    <span class="text-sm text-primary-dark text-opacity-80 text-center">Signed as</span>
+                    <span class="font-medium text-primary-dark pb-2 text-center">Hairul wardy</span>
+                    <hr class="w-full mt-2 pt-1">
+                    <a href="" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Profil</a>
+                    <a href="../../sign/login/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Login</a>
+                    <a href="../../sign/signup/index.html" class="rounded-sm text-primary-dark hover:bg-secondary-lightblue px-2 py-1">Sign up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- responsive hamburger menu -->
+        <div id="reponsive-btn" class=" lg:hidden">
+            <!-- hamburger -->
+            <svg id="hamburger-menu" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+
+            <!-- close -->
+            <svg id="close" class="w-6 h-6 text-gray-100 hover:text-gray-300 cursor-pointer hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </div>
+        <!-- end hamburger menu -->
+    </nav>
+    <!-- end navbar -->
+
+    <!-- responsive navbar -->
+    <div id="responsive-menu" class="lg:invisible h-5/6 w-full absolute z-20 top-6 transform -translate-y-1/4 opacity-0 transition-all ease-in flex justify-center items-center shadow-xl invisible">
+        <div class="flex flex-col text-center space-y-6 text-gray-100">
+            <a href="" class="font-medium hover:opacity-60">Home</a>
+            <div class="flex flex-col space-y-2">
+                <a href="" class="hover:opacity-60">Tools</a>
+                <!-- sub menu -->
+                <div id="" class="ml-16 flex flex-col space-y-3">
+                    <a href="" class="hover:opacity-60">Tools CLI</a>
+                    <a href="" class="hover:opacity-60">Tools web</a>
+                </div>
+
+                
+            </div>
+            <a href="" class="hover:opacity-60">Blog</a>
+            <a href="" class="hover:opacity-60">Contact</a>
+            <div class="flex flex-col space-y-2">
+                <a href="" class="hover:opacity-60">Join grup</a>
+                <!-- sub menu -->
+                <div id="" class="ml-16 flex flex-col space-y-3">
+                    <a href="" class="hover:opacity-60">Whatsapp</a>
+                    <a href="" class="hover:opacity-60">Telegram</a>
+                    <a href="" class="hover:opacity-60">Discord</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end responsive navbar -->
+
+    <!-- container -->
+    <section class="lg:flex justify-between px-10 lg:px-24">
+        <!-- artikel -->
+        <div class=" w-full lg:w-8/12 p-6 lg:p-14 bg-primary-light rounded-2xl shadow-2xl">
+            <!-- header -->
+            <div class="flex items-center space-x-8">
+                <!-- author -->
+                <div class="flex items-center space-x-3">
+                    <img src="../../../../assets/images/blog-images/artikel-1.png" class="rounded-full w-10" alt="">
+                    <h5 class="text-gray-300 font-medium text-lg">Osi</h5>
+                </div>
+                <span class="text-gray-400">30 sep 2020</span>
+            </div>
+            <!-- judul aertikel -->
+            <div class="mt-8 mb-6">
+                <h1 class="text-4xl lg:text-5xl font-semibold text-gray-50 text-center lg:text-left">Cara Membuat Nav Navbar Seperti Aplikasi Mobile dengan Bootstrap</h1>
+            </div>
+            <hr>
+            <!-- tag -->
+            <div class="flex space-x-4 py-4 justify-center lg:justify-start">
+                <p class="bg-gray-400 text-gray-700 font-medium py-1 px-6 rounded-full">#Bootstrap</p>
+                <p class="bg-gray-400 text-gray-700 font-medium py-1 px-6 rounded-full">#Css</p>
+                <p class="bg-gray-400 text-gray-700 font-medium py-1 px-6 rounded-full">#Tailwind</p>
+            </div>
+
+            <!-- artikel blog -->
+            <div class="mt-10">
+                <!-- thumbnail -->
+                <img src="../../../../assets/images/blog-images/blog-1.png" alt="">
+
+                <!-- content -->
+                <div class="mt-6 lg:pr-10">
+                    <h3 class="text-3xl text-gray-200 font-semibold">Membuat Navbar untuk Mobile</h3>
+                    <p class="text-gray-300 text-opacity-90 text-lg mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam iusto qui totam omnis deserunt aliquam minima nihil, a voluptatibus molestiae aliquid animi? Nesciunt doloremque, harum dolore esse perspiciatis, eos hic, ut facere nihil eveniet quo nobis dolores. Iusto itaque possimus recusandae eaque illo magnam, quisquam, doloremque saepe reprehenderit dolor quasi accusantium reiciendis dolorem harum quaerat exercitationem cum placeat suscipit fuga odit ea nobis iure cupiditate tempora! Quia repellat voluptatem sint provident nisi voluptas distinctio fugit sequi dolorem error. Nesciunt est consectetur cumque incidunt adipisci ea, deserunt minus illo deleniti odit accusantium nihil? Iure necessitatibus assumenda numquam cupiditate deserunt. Nisi eaque porro obcaecati incidunt ex natus, consequatur voluptate officiis animi libero veniam accusantium impedit reprehenderit dolor. Fugiat exercitationem, similique voluptates omnis voluptatem natus blanditiis explicabo pariatur cupiditate adipisci debitis quas libero id nisi veritatis laboriosam? Nulla doloremque quia unde, porro distinctio velit. Odit nulla animi fugiat aperiam, inventore pariatur repellendus repellat eius excepturi blanditiis quam unde voluptatibus, facere doloremque sapiente perferendis natus! Dolore ipsum ad consequatur totam fugit similique. Quod voluptatem dolorum sint iure deleniti velit explicabo fuga! Ad quis nulla deleniti tenetur nihil cumque illo quod ea pariatur, quos ipsa, fugiat dolor eligendi incidunt! Minima maxime, ducimus incidunt quod dolores mollitia sed quaerat eos fugit sit tempora velit facilis a, aspernatur autem similique quidem enim omnis, quae nam recusandae doloremque dolore. Ex reiciendis a accusantium voluptatibus impedit inventore, nesciunt consectetur dolores quidem alias aliquid atque repellat cumque qui culpa numquam, dolore obcaecati nostrum repellendus! Aut mollitia eaque blanditiis quas corrupti non magnam pariatur reiciendis reprehenderit odit. Officia ab, qui delectus eius soluta quam repellat eum asperiores iusto aperiam fugit voluptatem dolorum necessitatibus quasi consequuntur? Cumque quasi numquam nulla corrupti perferendis unde sequi, aliquid laboriosam autem ducimus delectus? In, sapiente quia? Numquam non culpa quas. Molestiae vel suscipit ducimus necessitatibus perspiciatis. Explicabo sed beatae incidunt modi error quasi numquam necessitatibus perferendis, consectetur inventore nesciunt, nihil vero exercitationem dolores ex enim possimus eaque impedit fuga repudiandae illum sint quis molestiae. Officiis nesciunt animi, eaque quod quae reiciendis qui at perspiciatis exercitationem eum vel maxime obcaecati, quam repellendus, quisquam minus placeat ea cupiditate? Laudantium molestiae facilis soluta temporibus reiciendis suscipit dicta perspiciatis blanditiis illum magni aperiam commodi repudiandae voluptas porro, nam deserunt laborum tempora, officia adipisci pariatur assumenda voluptatem. Quos debitis a nisi natus architecto! Odit aliquid voluptatibus, cupiditate veniam deleniti ex aut vel enim, nostrum temporibus iste expedita dolorem sed quos repellendus necessitatibus perferendis placeat nesciunt alias error commodi repellat molestiae vitae tenetur. Magnam temporibus, rerum fugit ipsa quaerat incidunt deserunt natus velit, libero amet nihil odio quisquam, et necessitatibus dolore. Nulla minus eius id nisi veritatis eos quod at dolorum suscipit, architecto voluptatem, asperiores alias! Architecto voluptatibus natus, ea enim adipisci provident ducimus laboriosam fugit esse consequuntur praesentium sint minima, possimus corporis? Repudiandae nam doloremque impedit totam, dolor quidem! Cum explicabo debitis minima excepturi maxime sed ad, iusto libero at, enim deleniti laborum quis culpa inventore corporis. Vitae ab, voluptatum obcaecati ratione nobis, facilis commodi accusantium illum minus quidem a in?</p>
+                </div>
+            </div>
+        </div>
+        <!-- artikel terbaru -->
+        <div class="w-full lg:w-custom bg-primary-light shadow-xl p-6 rounded-xl lg:mt-0 mt-8">
+            <!-- title -->
+            <h3 class="text-center text-2xl text-gray-200 mb-8">Artikel terbaru</h3>
+            <hr>
+            <!-- artikel -->
+            <div class="mt-6 flex space-y-4 flex-col">
+                <!-- card 1 -->
+                <div class="bg-primary-dark p-4 rounded-md">
+                    <div class="flex items-center mb-4 space-x-2">
+                        <h5 class="text-gray-300 font-medium">Tutorial Codeigniter 4: Membuat Template yang Efektif</h5>
+                        <img src="../../../../assets/images/blog-images/artikel-1.png" class="w-20" alt="">
+                    </div>
+                    <span class="text-sm text-gray-400">20 Oct 2020 • baca 6 menit</span>
+                </div>
+                <!-- card 1 -->
+                <div class="bg-primary-dark p-4 rounded-md">
+                    <div class="flex items-center mb-4 space-x-2">
+                        <h5 class="text-gray-300 font-medium">Tutorial Codeigniter 4: Membuat Template yang Efektif</h5>
+                        <img src="../../../../assets/images/blog-images/artikel-1.png" class="w-20" alt="">
+                    </div>
+                    <span class="text-sm text-gray-400">20 Oct 2020 • baca 6 menit</span>
+                </div>
+                <!-- card 1 -->
+                <div class="bg-primary-dark p-4 rounded-md">
+                    <div class="flex items-center mb-4 space-x-2">
+                        <h5 class="text-gray-300 font-medium">Tutorial Codeigniter 4: Membuat Template yang Efektif</h5>
+                        <img src="../../../../assets/images/blog-images/artikel-1.png" class="w-20" alt="">
+                    </div>
+                    <span class="text-sm text-gray-400">20 Oct 2020 • baca 6 menit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end container -->
+
+    <!-- footer -->
+    <footer class="bg-primary-footer p-16 flex flex-col justify-center items-center space-y-4 relative z-10 mt-10">
+        <!-- social media -->
+        <div class="flex space-x-4">
+            <img src="./assets/icons/facebook.svg" class="rounded-full" alt="">
+            <img src="./assets/icons/instagram.svg" class="rounded-full" alt="">
+            <img src="./assets/icons/behance.svg" class="rounded-full" alt="">
+        </div>
+
+        <!-- menu bar -->
+        <div class="flex text-gray-400 space-x-4">
+            <a href="">Home</a>
+            <a href="" >Tools</a>
+            <a href="./pages/user/blog/index.html">Blog</a>
+            <a href="">Contact</a>
+            <a href="">Join grup</a>
+        </div>
+        <!-- copyright -->
+        <span class="text-gray-300">&copy;Easlombok | Made with ❤️ </span>
+    </footer>
+    <!-- end footer -->
+
+    <!-- script -->
+    <script src="./script.js"></script>
+    <!-- end script -->
+    
+</body>
+</html>
