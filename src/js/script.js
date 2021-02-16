@@ -17,11 +17,20 @@ const hamburger = document.getElementById('hamburger-menu')
 
 // functions
 // ===========
-
+const toolsArrow = document.getElementById('tools-arrow')
+const joinArrow = document.getElementById('join-arrow')
 // dropdown function
 function menuDropdown(menu, modal) {
     menu.addEventListener('click', function() {
         modal.classList.toggle('invisible')
+
+        if (menu.id === 'tools') {
+            toolsArrow.classList.toggle('rotate-90')
+        }else if (menu.id === 'join-grup') {
+            joinArrow.classList.toggle('rotate-90')
+        }
+
+
         if(modal == dropTools) {
             dropJoin.classList.add('invisible')
             dropProfil.classList.add('invisible')
