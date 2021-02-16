@@ -58,3 +58,23 @@ resBtn.addEventListener('click', function() {
 menuDropdown(tools, dropTools)
 menuDropdown(joinGrup, dropJoin)
 menuDropdown(profil, dropProfil)
+
+// responsive menu
+const toolsMenuResponsive = document.getElementById('tools-menu-responsive')
+const toolsSubmenu = document.getElementById('tools-submenu')
+const homeMenuResponsive = document.getElementById('home-menu-responsive')
+// join
+const joinMenuResponsive = document.getElementById('join-menu-responsive')
+const joinSubmenu = document.getElementById('join-submenu')
+
+toolsMenuResponsive.addEventListener('click', function() {
+    toolsMenuResponsive.classList.toggle('bg-secondary-darkorange')
+    homeMenuResponsive.classList.toggle('bg-secondary-darkorange')
+    toolsSubmenu.classList.toggle('hidden')
+})
+
+joinMenuResponsive.addEventListener('click', function() {
+    joinMenuResponsive.classList.toggle('bg-secondary-darkorange')
+    homeMenuResponsive.classList.toggle('bg-secondary-darkorange')
+    joinSubmenu.classList.toggle('hidden')
+})
