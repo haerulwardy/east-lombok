@@ -57,3 +57,15 @@ resBtn.addEventListener('click', function() {
 menuDropdown(tools, dropTools)
 menuDropdown(joinGrup, dropJoin)
 menuDropdown(profil, dropProfil)
+
+// get token popup
+const modalGettoken = document.getElementById('modal-get-token')
+const closeGettoken = document.getElementById('close-get-token')
+const btnGettoken = document.getElementById('btn-get-token')
+
+btnGettoken.addEventListener('click', function() {
+    modalGettoken.classList.toggle('invisible')
+})
+closeGettoken.addEventListener('click', function() {
+    modalGettoken.classList.toggle('invisible')
+})
