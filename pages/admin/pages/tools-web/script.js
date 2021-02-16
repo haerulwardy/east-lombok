@@ -14,3 +14,23 @@ editWeb.addEventListener('click', function() {
 closeWeb.addEventListener('click', function() {
     modalWeb.classList.toggle('invisible')
 })
+
+// file reader
+const inputWeb = document.getElementById('input-web')
+const webPreview = document.getElementById('web-preview')
+const textWeb = document.getElementById('text-web')
+
+inputWeb.addEventListener('change', function() {
+    const file = this.files[0]
+    if(file) {
+        const reader = new FileReader()
+
+        textWeb.classList.add('hidden')
+        webPreview.classList.remove('hidden')
+
+        reader.addEventListener('load', function() {
+            webPreview.setAttribute('src', this.result)
+        })
+        reader.readAsDataURL(file)
+    }
+})

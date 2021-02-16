@@ -1,222 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind config -->
-    <link rel="stylesheet" href="../../../../public/css/tailwind.css">
-    <title>List user</title>
-</head>
-<body class="bg-gray-50">
-
+    <link rel="stylesheet" href="../../../../public/css/tailwind.css" />
+    <title>Tools web</title>
+  </head>
+  <body class="bg-gray-50">
     <!-- sidebar -->
-    <section class="w-1/4 bg-gradient-to-br from-primary-light to-primary-dark h-screen fixed left-0 top-0 px-2">
-        <!-- logo -->
-        <img src="../../../../assets/logo/logo.svg" class="mx-auto mt-10" alt="">
+    <section
+      class="w-1/4 bg-gradient-to-br from-primary-light to-primary-dark h-screen fixed left-0 top-0 px-2"
+    >
+      <!-- logo -->
+      <img
+        src="../../../../assets/logo/logo.svg"
+        class="mx-auto mt-10"
+        alt=""
+      />
 
-        <!-- menu -->
-        <div class="menu-sidebar mt-8">
-            <!-- dashboard -->
-            <a href="../../index.html" id="dashboard" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-            <!-- icon -->
-            <div class="menus flex items-center space-x-2">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                <!-- menu name -->
-                <p class="pl-4">Dashboard</p>
-            </div>
-            </a>
-
-            <!-- dashboard -->
-            <a href="../add-post/index.html" class="flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-                <!-- icon -->
-                <div class="flex items-center space-x-2">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                    <!-- menu name -->
-                    <p class="pl-4">Add post</p>
-                </div>
-            </a>
-            
-            <!-- List admin -->
-            <a href="../list-admin/index.html" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-                <!-- icon -->
-                <div class="menus flex items-center space-x-2">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
-                    <!-- menu name -->
-                    <p class="pl-4">List admin</p>
-                </div>
-            </a>
-                <!-- List user -->
-            <a href="" id="list-user" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-            <!-- icon -->
-            <div class="menus flex items-center space-x-2">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                <!-- menu name -->
-                <p class="pl-4">List user</p>
-            </div>
-            </a>
-            <!-- Token login -->
-            <a href="" id="token-login" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-                <!-- icon -->
-                <div class="menus flex items-center space-x-2">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"></path></svg>
-                    <!-- menu name -->
-                    <p class="pl-4">Token login</p>
-                </div>
-                </a>
-                    <!-- Tools CLI -->
-                <a href="" class="flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-                    <!-- icon -->
-                    <div class="menus flex items-center space-x-2">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path></svg>
-                        <!-- menu name -->
-                        <p class="pl-4">Tools CLI</p>
-                    </div>
-                    </a>
-                    <!-- Tools web -->
-                <a href="" id="tools-web" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer">
-                    <!-- icon -->
-                    <div class="menus flex items-center space-x-2">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg>
-                        <!-- menu name -->
-                        <p class="pl-4">Tools Web</p>
-                    </div>
-                    </a>
-                    <!-- Logout -->
-                <a href="" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300">
-                    <!-- icon -->
-                    <div class="menus flex items-center space-x-2">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-                        <!-- menu name -->
-                        <p class="pl-4">Logout</p>
-                    </div>
-                    </a>
+      <!-- menu -->
+      <div class="menu-sidebar mt-8">
+        <!-- dashboard -->
+        <a
+          href="../../index.html"
+          id="dashboard"
+          class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="menus flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">Dashboard</p>
           </div>
+        </a>
+
+        <!-- dashboard -->
+        <a
+          href="../add-post/index.html"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">Add post</p>
+          </div>
+        </a>
+
+        <!-- List admin -->
+        <a
+          href="../list-admin/index.html"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+              <path
+                fill-rule="evenodd"
+                d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">List admin</p>
+          </div>
+        </a>
+        <!-- List user -->
+        <a
+          href="../list-user/index.html"
+          id="list-user"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">List user</p>
+          </div>
+        </a>
+        <!-- Token login -->
+        <a
+          href="../token-login/index.html"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">Token login</p>
+          </div>
+        </a>
+        <!-- Tools CLI -->
+        <a
+          href="../tools-cli/index.html"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">Tools CLI</p>
+          </div>
+        </a>
+        <!-- Tools web -->
+        <a
+          href=""
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer"
+        >
+          <!-- icon -->
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">Tools Web</p>
+          </div>
+        </a>
+        <!-- Logout -->
+        <a
+          href=""
+          class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+        >
+          <!-- icon -->
+          <div class="menus flex items-center space-x-2">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <!-- menu name -->
+            <p class="pl-4">Logout</p>
+          </div>
+        </a>
+      </div>
     </section>
     <!-- end sidebar -->
 
     <!-- container -->
     <div class="content h-screen w-custom-sidebar absolute z-10 ml-96 px-10">
-        <div id="dashboard-content">
-            <!-- web tools cli -->
+      <div id="dashboard-content">
+        <!-- web tools cli -->
         <div id="toolsweb-content" class="content my-10">
-            <button id="add-web-btn" class="px-10 py-3 bg-green-700 rounded-md text-gray-200">Add</button>
-            <!-- tabel -->
-            <table class="w-full table-auto shadow-xl mt-4">
-                <thead class="text-center">
-                  <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
-                    <th class="px-4 py-2">
-                      <span class="text-gray-300">No</span>
-                    </th>
-                    <th class="px-12 py-2">
-                      <span class="text-gray-300">Name</span>
-                    </th>
-                    <th class="px-12 py-2">
-                      <span class="text-gray-300">Version</span>
-                    </th>
-                    <th class="px-12 py-2">
-                      <span class="text-gray-300">Status</span>
-                    </th>
-                    <th class="px-12 py-2">
-                      <span class="text-gray-300">Author</span>
-                    </th>
-                    <th class="px-12 py-2">
-                      <span class="text-gray-300">Action</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="bg-gray-200 text-center">
-                    <tr class="bg-white border-4 border-gray-200">
-                        <td class="py-3">
-                            <span class="font-semibold">1</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Hairul wardi</span>
-                        </td>
-                        <td class="px-16 py-2">
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td class="flex space-x-2 justify-center items-center">
-                            <button class="bg-red-500 px-6 py-1 text-gray-300 rounded-md">Hapus</button>
-                            <button id="edit-web" class="bg-green-500 px-6 py-1 text-gray-300 rounded-md">Edit</button>
-                        </td>
-                    </tr>
-                </tbody>
-              </table>
+          <button
+            id="add-web-btn"
+            class="px-10 py-3 bg-green-700 rounded-md text-gray-200"
+          >
+            Add
+          </button>
+          <!-- tabel -->
+          <table class="w-full table-auto shadow-xl mt-4">
+            <thead class="text-center">
+              <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
+                <th class="px-4 py-2">
+                  <span class="text-gray-300">No</span>
+                </th>
+                <th class="px-12 py-2">
+                  <span class="text-gray-300">Name</span>
+                </th>
+                <th class="px-12 py-2">
+                  <span class="text-gray-300">Version</span>
+                </th>
+                <th class="px-12 py-2">
+                  <span class="text-gray-300">Status</span>
+                </th>
+                <th class="px-12 py-2">
+                  <span class="text-gray-300">Author</span>
+                </th>
+                <th class="px-12 py-2">
+                  <span class="text-gray-300">Action</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-gray-200 text-center">
+              <tr class="bg-white border-4 border-gray-200">
+                <td class="py-3">
+                  <span class="font-semibold">1</span>
+                </td>
+                <td>
+                  <span class="font-semibold">Hairul wardi</span>
+                </td>
+                <td class="px-16 py-2">
+                  <span class="font-semibold">Lorem ipsum</span>
+                </td>
+                <td>
+                  <span class="font-semibold">Lorem ipsum</span>
+                </td>
+                <td>
+                  <span class="font-semibold">Lorem ipsum</span>
+                </td>
+                <td class="flex space-x-2 justify-center items-center">
+                  <button class="bg-red-500 px-6 py-2 text-gray-300 rounded-md">
+                    Hapus
+                  </button>
+                  <button
+                    id="edit-web"
+                    class="bg-green-500 px-6 py-1 text-gray-300 rounded-md"
+                  >
+                    Edit
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        </div>
+      </div>
     </div>
 
     <!-- modal web -->
-    <div id="modal-web" class="w-3/4 bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible">
-        <div class="bg-gray-50 rounded-2xl p-12 relative w-3/5">
-            <!-- close -->
-        <svg id="close-web" class="w-6 h-6 absolute top-8 right-8 cursor-pointer z-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    <div
+      id="modal-web"
+      class="w-3/4 bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible"
+    >
+      <div class="bg-gray-50 rounded-2xl p-12 relative w-3/5">
+        <!-- close -->
+        <svg
+          id="close-web"
+          class="w-6 h-6 absolute top-8 right-8 cursor-pointer z-50"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
         <form action="" class="mt-10 flex flex-col w-full space-y-2">
-            <!-- email & fullname -->
-            <div class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between">
-                <div class="flex flex-col w-full">
-                    <label for="name" class="font-normal cursor-pointer text-primary-dark">Name</label>
-                    <input type="text" id="name" placeholder="name" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
-                </div>
-                <div class="flex flex-col w-full">
-                    <label for="version" class="font-normal cursor-pointer text-primary-dark">Version</label>
-                    <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                </div>
+          <!-- email & fullname -->
+          <div
+            class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
+          >
+            <div class="flex flex-col w-full">
+              <label
+                for="name"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                placeholder="name"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
             </div>
-            <!-- email & fullname -->
-            <div class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between">
-                <div class="flex flex-col w-full">
-                    <label for="fullname" class="font-normal cursor-pointer text-primary-dark">Status</label>
-                    <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                </div>
-                <div class="flex flex-col w-full">
-                    <label for="fullname" class="font-normal cursor-pointer text-primary-dark">Author</label>
-                    <input type="text" id="fullname" placeholder="fullname" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
-                </div>
+            <div class="flex flex-col w-full">
+              <label
+                for="version"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Version</label
+              >
+              <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
-            <div class="flex flex-col">
-                <label for="email" class="font-normal cursor-pointer text-primary-dark">Link download</label>
-                <input type="text" id="email" placeholder="email" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
+          </div>
+          <!-- email & fullname -->
+          <div
+            class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
+          >
+            <div class="flex flex-col w-full">
+              <label
+                for="fullname"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Status</label
+              >
+              <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
+            <div class="flex flex-col w-full">
+              <label
+                for="fullname"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Author</label
+              >
+              <input
+                type="text"
+                id="fullname"
+                placeholder="fullname"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <label
+              for="email"
+              class="font-normal cursor-pointer text-primary-dark"
+              >Link download</label
+            >
+            <input
+              type="text"
+              id="email"
+              placeholder="email"
+              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+            />
+          </div>
 
-            <!-- token -->
-            <div class="flex flex-col">
-                <label for="token" class="font-normal cursor-pointer text-primary-dark">Thumbnail</label>
-                <div class="flex">
-                    <input type="file" id="input-web" placeholder="token" class="mt-2 bg-transparent">
-                    <div id="input-web-container" class="w-2/4 h-36 border-2 border-gray-400 flex justify-center items-center overflow-hidden">
-                        <img id="web-preview" src="" class="w-full hidden" alt="">
-                        <span id="text-web">Image preview</span>
-                    </div>
-                </div>
-                <!-- submit -->
-                <button class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium">Register</button>
+          <!-- token -->
+          <div class="flex flex-col">
+            <label
+              for="token"
+              class="font-normal cursor-pointer text-primary-dark"
+              >Thumbnail</label
+            >
+            <div class="flex">
+              <input
+                type="file"
+                id="input-web"
+                placeholder="token"
+                class="mt-2 bg-transparent"
+              />
+              <div
+                id="input-web-container"
+                class="w-2/4 h-36 border-2 border-gray-400 flex justify-center items-center overflow-hidden"
+              >
+                <img id="web-preview" src="" class="w-full hidden" alt="" />
+                <span id="text-web">Image preview</span>
+              </div>
             </div>
+            <!-- submit -->
+            <button
+              class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium"
+            >
+              Register
+            </button>
+          </div>
         </form>
-        </div>
+      </div>
     </div>
-
 
     <!-- script -->
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
