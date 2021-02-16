@@ -46,9 +46,9 @@
                 </div>
             </a>
                     <!-- List user -->
-                    <a href="" id="list-user" class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300">
+                    <a href="./pages/list-user/index.html" class="flex justify-between items-center px-6 py-3 text-sm text-gray-300">
                     <!-- icon -->
-                    <div class="menus flex items-center space-x-2">
+                    <div class="flex items-center space-x-2">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
                         <!-- menu name -->
                         <p class="pl-4">List user</p>
@@ -209,110 +209,7 @@
         </div>
 
 
-        <!-- Add post -->
-        <div id="addpost-content" class="my-10 content py-40 bg-gray-300 justify-center items-center hidden">
-            <h2>add post area</h2>
-        </div>
-        <!-- end add post -->
-
-
-        <!-- List admin -->
-        <div id="listadmin-content" class="content my-10">
-            <button id="add-admin-btn" class="px-10 py-3 bg-green-700 rounded-md text-gray-200">Add admin</button>
-            <!-- tabel -->
-            <table class="w-full table-auto shadow-xl mt-4">
-                <thead class="text-center">
-                  <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
-                    <th class="px-4 py-2">
-                      <span class="text-gray-300">No</span>
-                    </th>
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Name</span>
-                    </th>
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Post</span>
-                    </th>
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Level</span>
-                    </th>
         
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Action</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="bg-gray-200 text-center">
-                    <tr class="bg-white border-4 border-gray-200">
-                        <td class="py-3">
-                            <span class="font-semibold">1</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Hairul wardi</span>
-                        </td>
-                        <td class="px-16 py-2">
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td class="flex space-x-2 justify-center items-center">
-                            <button class="bg-red-500 px-6 py-2 text-gray-300 rounded-md">Hapus</button>
-                            <button class="bg-green-500 px-6 py-2 text-gray-300 rounded-md">Edit</button>
-                        </td>
-                    </tr>
-                </tbody>
-              </table>
-        </div>
-        <!-- end list admin -->
-
-        <!-- List user -->
-        <div id="listuser-content" class="content my-10 hidden">
-            <button id="add-user-btn" class="px-10 py-3 bg-green-700 rounded-md text-gray-200">Add user</button>
-            <!-- tabel -->
-            <table class="w-full table-auto shadow-xl mt-4">
-                <thead class="text-center">
-                  <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
-                    <th class="px-4 py-2">
-                      <span class="text-gray-300">No</span>
-                    </th>
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Name</span>
-                    </th>
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Hits</span>
-                    </th>
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Poin</span>
-                    </th>
-        
-                    <th class="px-16 py-2">
-                      <span class="text-gray-300">Action</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="bg-gray-200 text-center">
-                    <tr class="bg-white border-4 border-gray-200">
-                        <td class="py-3">
-                            <span class="font-semibold">1</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Hairul wardi</span>
-                        </td>
-                        <td class="px-16 py-2">
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td>
-                            <span class="font-semibold">Lorem ipsum</span>
-                        </td>
-                        <td class="flex space-x-2 justify-center items-center">
-                            <button class="bg-red-500 px-6 py-2 text-gray-300 rounded-md">Hapus</button>
-                            <button class="bg-green-500 px-6 py-2 text-gray-300 rounded-md">Edit</button>
-                        </td>
-                    </tr>
-                </tbody>
-              </table>
-        </div>
-        <!-- end list user -->
         <!-- Token login -->
         <div id="tokenlogin-content" class="content my-10 hidden">
             <button id="add-user-btn" class="px-10 py-3 bg-green-700 rounded-md text-gray-200">Genrate</button>
@@ -495,36 +392,7 @@
         </div>
     </div>
 
-    <!-- modal user -->
-    <div id="modal-user" class="w-3/4 bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible">
-        <div class="bg-gray-50 rounded-2xl p-12 relative w-3/5">
-            <!-- close -->
-        <svg id="close-user" class="w-6 h-6 absolute top-8 right-8 cursor-pointer z-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            <!-- form -->
-            <form action="" class="mt-10 flex flex-col w-full space-y-2">
-                <!-- email & fullname -->
-                <div class="flex flex-col">
-                    <label for="email" class="font-normal cursor-pointer text-primary-dark">Email</label>
-                    <input type="text" id="email" placeholder="email" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
-                </div>
-                <div class="flex flex-col">
-                    <label for="email" class="font-normal cursor-pointer text-primary-dark">Username</label>
-                    <input type="text" id="email" placeholder="username" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
-                </div>
-                <div class="flex flex-col">
-                    <label for="email" class="font-normal cursor-pointer text-primary-dark">Password</label>
-                    <input type="password" id="email" placeholder="password" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
-                </div>
-                <!-- token -->
-                <div class="flex flex-col">
-                    <label for="token" class="font-normal cursor-pointer text-primary-dark">Token</label>
-                    <input type="number" id="token" placeholder="token" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
-                    <!-- submit -->
-                    <button class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium">Register</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    
     <!-- modal maintenance -->
     <div id="modal-maintenance" class="w-3/4 bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible">
         <div class="bg-gray-50 rounded-2xl p-12 relative w-3/5">
