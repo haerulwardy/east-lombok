@@ -6,6 +6,7 @@ const logo = document.getElementById('logo')
 const sidebarContent = document.getElementById('sidebar-content')
 const menuSidebar = document.getElementById('menu-sidebar')
 const closeSidebar = document.getElementById('close-sidebar')
+const containerDashboard = document.getElementById('container-dashboard')
 
 sidebarIcon.addEventListener('click', function() {
     sidebar.classList.toggle('w-1/4')
@@ -18,4 +19,7 @@ sidebarIcon.addEventListener('click', function() {
     sidebarContent.classList.toggle('mt-8')
     menuSidebar.classList.toggle('hidden')
     closeSidebar.classList.toggle('hidden')
+    containerDashboard.classList.toggle('ml-96')
+    containerDashboard.classList.toggle('ml-20')
+    containerDashboard.classList.toggle('w-custom-sidebar')
 })
