@@ -31,3 +31,21 @@ sidebarIcon.addEventListener('click', function() {
     sidebarContent.classList.toggle('pt-6')
     sidebarContent.classList.toggle('mt-8')
 })
+
+// ck editor
+ClassicEditor.create(document.getElementById('my-editor'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
