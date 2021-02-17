@@ -37,6 +37,8 @@ sidebarIcon.addEventListener('click', function() {
     adminContainer.classList.toggle('w-full')
     adminContainer.classList.toggle('ml-96')
     adminContainer.classList.toggle('ml-20')
+    modalAdmin.classList.toggle('w-3/4')
+    modalAdmin.classList.toggle('w-full')
 })
 
 
