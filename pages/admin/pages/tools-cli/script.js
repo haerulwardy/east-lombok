@@ -63,3 +63,12 @@ sidebarIcon.addEventListener('click', function() {
     modalCli.classList.toggle('w-3/4')
     modalCli.classList.toggle('w-full')
 })
+
+// top bar
+const topbarIcon = document.getElementById('topbar-icon')
+const menubarDown = document.getElementById('menubar-down') 
+
+topbarIcon.addEventListener('click', function() {
+    menubarDown.classList.toggle('hidden')
+    menubarDown.classList.toggle('transform')
+})
