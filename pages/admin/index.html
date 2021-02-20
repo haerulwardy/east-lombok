@@ -12,7 +12,7 @@
     <!-- sidebar -->
     <section
       id="sidebar"
-      class="w-1/4 bg-gradient-to-br from-primary-light to-primary-dark h-screen fixed left-0 top-0 px-2 transition-all z-50"
+      class="w-1/4 bg-gradient-to-br from-primary-light to-primary-dark h-screen fixed left-0 top-0 px-2 transition-all z-50 hidden lg:block"
     >
 
     <div id="sidebar-icon" class="absolute top-8 right-8">
@@ -212,8 +212,30 @@
     </section>
     <!-- end sidebar -->
 
+    <!-- responsive navbar -->
+    <section id="top-bar" class="bg-gradient-to-br from-primary-light to-primary-dark shadow-xl flex justify-between items-center relative z-10 px-10 py-6 lg:hidden">
+      <img src="../../../../assets/logo/logo.svg" class="w-16" alt="">
+
+      <svg id="topbar-icon" class="w-6 h-6 text-gray-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </section>
+
+    <!-- responsive -->
+    <div id="menubar-down" class="bg-gradient-to-br from-primary-light to-primary-dark lg:hidden px-10 transform -translate-y-56 hidden transition-all duration-300">
+      <div class="flex flex-col items-center justify-center space-y-2 py-20 text-gray-200">
+        <a href="" class="bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Dashboard</a>
+        <a href="./pages/add-post/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Add post</a>
+        <a href="./pages/list-admin/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List admin</a>
+        <a href="./pages/list-admin/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List user</a>
+        <a href="./pages/token-login/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Token login</a>
+        <a href="./pages/tools-cli/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools cli</a>
+        <a href="./pages/tools-web/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools web</a>
+        <a href="" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Checkout</a>
+      </div>
+    </div>
+    <!-- end responsive -->
+
     <!-- container -->
-    <div id="container-dashboard" class="content h-screen w-custom-sidebar absolute z-10 ml-96 px-10 transition-all duration-100">
+    <div id="container-dashboard" class="content h-screen w-full lg:w-custom-sidebar absolute z-10 lg:ml-96 px-10 transition-all duration-100">
       <div id="dashboard-content">
         <!-- dashboard -->
         <div class="my-10">
@@ -224,90 +246,89 @@
           </h2>
 
           <!-- grid -->
-          <div class="grid grid-cols-3 mt-10 gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 mt-10 gap-6">
             <!-- col -->
             <div
-              class="bg-gray-200 flex justify-center space-x-8 p-8 rounded-md"
+              class="bg-gray-200 flex justify-center items-center lg:items-start lg:flex-row flex-col lg:space-x-8 p-8 rounded-md"
             >
-              <div>
-                <h3 class="text-4xl font-semibold text-primary-dark">100</h3>
+              <div class="text-center">
+                <h3 class="lg:text-4xl text-5xl font-semibold text-primary-dark">100</h3>
                 <p class="mt-1 text-primary-dark text-opacity-80">Total user</p>
               </div>
               <img
                 src="../../assets/icons/admin/admin.svg"
-                class="w-20"
+                class="w-20 mt-4 lg:mt-0"
                 alt=""
               />
             </div>
             <!-- col -->
             <div
-              class="bg-gray-200 flex justify-center space-x-8 p-8 rounded-md"
+              class="bg-gray-200 flex justify-center items-center lg:items-start lg:flex-row flex-col lg:space-x-8 p-8 rounded-md"
             >
-              <div>
-                <h3 class="text-4xl font-semibold text-primary-dark">100</h3>
+              <div class="text-center">
+                <h3 class="text-5xl font-semibold text-primary-dark">100</h3>
                 <p class="mt-1 text-primary-dark text-opacity-80">
                   Total admin
                 </p>
               </div>
               <img
                 src="../../assets/icons/admin/admin.svg"
-                class="w-20"
+                class="w-20 mt-4"
                 alt=""
               />
             </div>
             <!-- col -->
             <div
-              class="bg-gray-200 flex justify-center space-x-8 p-8 rounded-md"
+              class="bg-gray-200 flex justify-center items-center lg:items-start lg:flex-row flex-col lg:space-x-8 p-8 rounded-md"
             >
               <div>
-                <h3 class="text-4xl font-semibold text-primary-dark">100</h3>
+                <h3 class="text-5xl font-semibold text-primary-dark">100</h3>
                 <p class="mt-1 text-primary-dark text-opacity-80">Total hits</p>
               </div>
               <img
                 src="../../assets/icons/admin/view.svg"
-                class="w-20"
-                alt=""
-              />
+                class="w-20 mt-4"
+                alt="">
             </div>
             <!-- col -->
             <div
-              class="bg-gray-200 flex justify-center space-x-8 p-8 rounded-md"
+              class="bg-gray-200 flex justify-center items-center lg:items-start lg:flex-row flex-col lg:space-x-8 p-8 rounded-md"
             >
-              <div>
-                <h3 class="text-4xl font-semibold text-primary-dark">100</h3>
+              <div class="text-center">
+                <h3 class="text-5xl font-semibold text-primary-dark">100</h3>
                 <p class="mt-1 text-primary-dark text-opacity-80">Total post</p>
               </div>
               <img
                 src="../../assets/icons/admin/post.svg"
-                class="w-20"
+                class="w-20 mt-4"
                 alt=""
-              />
+              / mt-4>
             </div>
             <!-- col -->
             <div
-              class="bg-gray-200 flex justify-center space-x-8 p-8 rounded-md"
+              class="bg-gray-200 flex justify-center items-center lg:items-start lg:flex-row flex-col lg:space-x-8 p-8 rounded-md"
             >
-              <div>
-                <h3 class="text-4xl font-semibold text-primary-dark">100</h3>
+              <div class="text-center">
+                <h3 class="text-5xl font-semibold text-primary-dark">100</h3>
                 <p class="mt-1 text-primary-dark text-opacity-80">
                   Total view post
                 </p>
               </div>
-              <img src="../../assets/icons/admin/eye.svg" class="w-20" alt="" />
+              <img src="../../assets/icons/admin/eye.svg" class="w-20 mt-4" alt="" />
             </div>
             <!-- col -->
             <div
-              class="bg-gray-200 flex justify-center space-x-8 p-8 rounded-md"
+              class="bg-gray-200 flex justify-center items-center lg:items-start lg:flex-row flex-col lg:space-x-8 p-8 rounded-md"
             >
-              <div>
-                <h3 class="text-4xl font-semibold text-primary-dark">100</h3>
+              <div class="text-center">
+                <h3 class="text-5xl font-semibold text-primary-dark">100</h3>
                 <p class="mt-1 text-primary-dark text-opacity-80">
                   Total tools
                 </p>
               </div>
               <img
                 src="../../assets/icons/admin/tools.svg"
-                class="w-20"
+                class="w-20  mt-4"
                 alt=""
               />
             </div>

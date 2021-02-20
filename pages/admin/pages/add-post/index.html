@@ -239,9 +239,65 @@
       <div id="dashboard-content">
         <!-- Add post -->
         <!-- paste ck editor -->
-        <form action="" class="w-full">
-          <textarea name="" id="my-editor" cols="30" rows="10"></textarea>
-          <button class="py-3 px-12 text-gray-50 rounded-md mt-6 bg-secondary-orange hover:bg-secondary-darkorange">Submit</button>
+        <form action="" class="w-full  pb-10">
+          <div class="flex flex-col">
+            <label
+              for="title"
+              class="font-normal cursor-pointer text-primary-dark"
+              >Title</label
+            >
+            <input
+              type="text"
+              id="title"
+              placeholder="title"
+              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+            />
+          </div>
+          <div class="mt-6">
+            <textarea name="" id="my-editor" cols="30" rows="10"></textarea>
+          </div>
+          <div class="flex flex-col mt-6">
+            <label
+              for="kategori"
+              class="font-normal cursor-pointer text-primary-dark"
+              >Kategori</label
+            >
+            <select id="katgori" class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200">
+              <option>Kategori 1</option>
+              <option>Kategori 2</option>
+              <option>Kategori 3</option>
+            </select>
+          </div>
+          <div class="flex flex-col mt-6">
+            <label
+              for="tags"
+              class="font-normal cursor-pointer text-primary-dark"
+              >Tags</label
+            >
+            <input
+              type="text"
+              id="tags"
+              placeholder="tags"
+              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+            />
+          </div>
+          <div class="mt-6">
+            
+            <div
+              id="input-add-container"
+              class="lg:w-2/4 w-full h-48 border-2 border-gray-400 flex justify-center items-center overflow-hidden"
+            >
+              <img id="add-preview" src="" class="w-full hidden" alt="" />
+              <span id="text-add">Image preview</span>
+            </div>
+            <input
+              type="file"
+              id="input-add"
+              placeholder="token"
+              class="mt-4 bg-transparent"
+            />
+          </div>
+          <button class="py-3 w-full text-gray-50 rounded-md mt-6 bg-secondary-orange hover:bg-secondary-darkorange">Submit</button>
         </form>
         <!-- end add post -->
       </div>

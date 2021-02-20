@@ -21,3 +21,12 @@ sidebarIcon.addEventListener('click', function() {
     tokenContainer.classList.toggle('ml-96')
     tokenContainer.classList.toggle('ml-20')
 })
+
+// top bar
+const topbarIcon = document.getElementById('topbar-icon')
+const menubarDown = document.getElementById('menubar-down') 
+
+topbarIcon.addEventListener('click', function() {
+    menubarDown.classList.toggle('hidden')
+    menubarDown.classList.toggle('transform')
+})

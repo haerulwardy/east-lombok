@@ -35,6 +35,25 @@ sidebarIcon.addEventListener('click', function() {
 // ck editor
 ClassicEditor.create(document.getElementById('my-editor'))
 
+// add file
+const inputAdd = document.getElementById('input-add')
+const inputAddContainer = document.getElementById('input-add-container')
+const addPreview = document.getElementById('add-preview')
+const textAdd = document.getElementById('text-add')
+
+inputAdd.addEventListener('change', function() {
+    const file = this.files[0]
+    
+    if(file) {
+        const reader = new FileReader()
+        addPreview.classList.remove('hidden')
+        textAdd.classList.add('hidden')
+        reader.addEventListener('load', function() {
+            addPreview.setAttribute('src', this.result)
+        })
+        reader.readAsDataURL(file)
+    }
+})
 
 
 
