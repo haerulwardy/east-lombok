@@ -237,155 +237,71 @@
     <div id="user-container" class="content h-screen w-custom-sidebar absolute z-10 lg:ml-96 px-10">
       <div id="dashboard-content">
         <!-- List user -->
-        <div id="listuser-content" class="content my-10">
-          <button
-            id="add-user-btn"
-            class="px-10 py-3 bg-green-700 rounded-md text-gray-200"
-          >
-            Add user
-          </button>
-          <!-- tabel -->
-          <table class="w-full table-auto shadow-xl mt-4">
-            <thead class="text-center">
-              <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
-                <th class="px-4 py-2">
-                  <span class="text-gray-300">No</span>
-                </th>
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Name</span>
-                </th>
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Hits</span>
-                </th>
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Poin</span>
-                </th>
-
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="bg-gray-200 text-center">
-              <tr class="bg-white border-4 border-gray-200">
-                <td class="py-3">
-                  <span class="font-semibold">1</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Hairul wardi</span>
-                </td>
-                <td class="px-16 py-2">
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td class="flex space-x-2 justify-center items-center">
-                  <button class="bg-red-500 px-6 py-1 text-gray-300 rounded-md">
-                    Hapus
-                  </button>
-                  <a href="./edit-user.html">
-                    <button
-                      class="bg-green-500 px-6 py-1 text-gray-300 rounded-md"
-                    >
-                      Edit
-                    </button>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <form action="" class="mt-10 flex flex-col w-full space-y-2">
+            <!-- email & fullname -->
+            <div class="flex flex-col">
+              <label
+                for="email"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Email</label
+              >
+              <input
+                type="text"
+                id="email"
+                placeholder="email"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label
+                for="email"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Username</label
+              >
+              <input
+                type="text"
+                id="email"
+                placeholder="username"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label
+                for="email"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="email"
+                placeholder="password"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
+            </div>
+            <!-- token -->
+            <div class="flex flex-col">
+              <label
+                for="token"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Token</label
+              >
+              <input
+                type="number"
+                id="token"
+                placeholder="token"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
+              <!-- submit -->
+              <button
+                class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium"
+              >
+                Register
+              </button>
+            </div>
+          </form>
         <!-- end list user -->
       </div>
     </div>
-
-    <!-- modal user -->
-    <div
-      id="modal-user"
-      class="lg:w-3/4 w-full bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible px-10"
-    >
-      <div class="bg-gray-50 rounded-2xl p-12 relative lg:w-3/5 w-full">
-        <!-- close -->
-        <svg
-          id="close-user"
-          class="w-6 h-6 absolute top-8 right-8 cursor-pointer z-50"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-        <!-- form -->
-        <form action="" class="mt-10 flex flex-col w-full space-y-2">
-          <!-- email & fullname -->
-          <div class="flex flex-col">
-            <label
-              for="email"
-              class="font-normal cursor-pointer text-primary-dark"
-              >Email</label
-            >
-            <input
-              type="text"
-              id="email"
-              placeholder="email"
-              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label
-              for="email"
-              class="font-normal cursor-pointer text-primary-dark"
-              >Username</label
-            >
-            <input
-              type="text"
-              id="email"
-              placeholder="username"
-              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label
-              for="email"
-              class="font-normal cursor-pointer text-primary-dark"
-              >Password</label
-            >
-            <input
-              type="password"
-              id="email"
-              placeholder="password"
-              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-            />
-          </div>
-          <!-- token -->
-          <div class="flex flex-col">
-            <label
-              for="token"
-              class="font-normal cursor-pointer text-primary-dark"
-              >Token</label
-            >
-            <input
-              type="number"
-              id="token"
-              placeholder="token"
-              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-            />
-            <!-- submit -->
-            <button
-              class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium"
-            >
-              Register
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
     <!-- script -->
     <script src="./script.js"></script>
   </body>

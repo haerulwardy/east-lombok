@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind config -->
     <link rel="stylesheet" href="../../../../public/css/tailwind.css" />
-    <title>List user</title>
+    <title>Edit admin</title>
   </head>
   <body class="bg-gray-50">
     <!-- sidebar -->
@@ -14,12 +14,12 @@
     id="sidebar"
     class="w-1/4 bg-gradient-to-br from-primary-light to-primary-dark h-screen fixed left-0 top-0 px-2 transition-all z-50 hidden lg:block">
 
-    <div id="sidebar-icon" class="absolute top-8 right-8">
-      <!-- menu icon -->
-      <svg id="menu-sidebar" class="w-6 h-6 text-gray-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-      <!-- close icon -->
-      <svg id="close-sidebar" class="w-6 h-6 text-gray-100 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-  </div>
+      <div id="sidebar-icon" class="absolute top-8 right-8">
+        <!-- menu icon -->
+        <svg id="menu-sidebar" class="w-6 h-6 text-gray-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        <!-- close icon -->
+        <svg id="close-sidebar" class="w-6 h-6 text-gray-100 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </div>
 
       <!-- logo -->
       <img id="logo" src="../../../../assets/logo/logo.svg" class="mx-auto mt-10 transition-all duration-300" alt="" />
@@ -75,8 +75,8 @@
 
         <!-- List admin -->
         <a
-          href="../list-admin/index.html"
-          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+          href=""
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer"
         >
           <!-- icon -->
           <div class="flex items-center space-x-2">
@@ -100,7 +100,7 @@
         <!-- List user -->
         <a
           href="../list-user/index.html"
-          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
         >
           <!-- icon -->
           <div class="flex items-center space-x-2">
@@ -165,10 +165,10 @@
         <!-- Tools web -->
         <a
           href="../tools-web/index.html"
-          class="menu-item flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
         >
           <!-- icon -->
-          <div class="menus flex items-center space-x-2">
+          <div class="flex items-center space-x-2">
             <svg
               class="w-6 h-6"
               fill="currentColor"
@@ -223,8 +223,8 @@
       <div class="flex flex-col items-center justify-center space-y-2 py-20 text-gray-200">
         <a href="../../index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Dashboard</a>
         <a href="../add-post/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Add post</a>
-        <a href="../list-admin/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List admin</a>
-        <a href="" class="bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List user</a>
+        <a href="../list-admin/index.html" class="bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List admin</a>
+        <a href="../list-user/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List user</a>
         <a href="../token-login/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Token login</a>
         <a href="../tools-cli/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools cli</a>
         <a href="../tools-web/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools web</a>
@@ -234,93 +234,10 @@
     <!-- end responsive -->
 
     <!-- container -->
-    <div id="user-container" class="content h-screen w-custom-sidebar absolute z-10 lg:ml-96 px-10">
-      <div id="dashboard-content">
-        <!-- List user -->
-        <div id="listuser-content" class="content my-10">
-          <button
-            id="add-user-btn"
-            class="px-10 py-3 bg-green-700 rounded-md text-gray-200"
-          >
-            Add user
-          </button>
-          <!-- tabel -->
-          <table class="w-full table-auto shadow-xl mt-4">
-            <thead class="text-center">
-              <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
-                <th class="px-4 py-2">
-                  <span class="text-gray-300">No</span>
-                </th>
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Name</span>
-                </th>
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Hits</span>
-                </th>
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Poin</span>
-                </th>
-
-                <th class="px-16 py-2">
-                  <span class="text-gray-300">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="bg-gray-200 text-center">
-              <tr class="bg-white border-4 border-gray-200">
-                <td class="py-3">
-                  <span class="font-semibold">1</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Hairul wardi</span>
-                </td>
-                <td class="px-16 py-2">
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td class="flex space-x-2 justify-center items-center">
-                  <button class="bg-red-500 px-6 py-1 text-gray-300 rounded-md">
-                    Hapus
-                  </button>
-                  <a href="./edit-user.html">
-                    <button
-                      class="bg-green-500 px-6 py-1 text-gray-300 rounded-md"
-                    >
-                      Edit
-                    </button>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- end list user -->
-      </div>
-    </div>
-
-    <!-- modal user -->
-    <div
-      id="modal-user"
-      class="lg:w-3/4 w-full bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible px-10"
-    >
-      <div class="bg-gray-50 rounded-2xl p-12 relative lg:w-3/5 w-full">
-        <!-- close -->
-        <svg
-          id="close-user"
-          class="w-6 h-6 absolute top-8 right-8 cursor-pointer z-50"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-        <!-- form -->
+    <div id="admin-container" class="content h-screen w-custom-sidebar absolute z-10 lg:ml-96 px-10">
+      <div id="dashboard-content0">
+        
+        <!-- modal admin -->
         <form action="" class="mt-10 flex flex-col w-full space-y-2">
           <!-- email & fullname -->
           <div class="flex flex-col">
@@ -383,10 +300,9 @@
             </button>
           </div>
         </form>
+
       </div>
     </div>
-
-    <!-- script -->
-    <script src="./script.js"></script>
+    
   </body>
 </html>
