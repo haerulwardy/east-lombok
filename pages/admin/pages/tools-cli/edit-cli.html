@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind config -->
     <link rel="stylesheet" href="../../../../public/css/tailwind.css" />
-    <title>Tools web</title>
+    <title>Tools CLI</title>
   </head>
   <body class="bg-gray-50">
     <!-- sidebar -->
@@ -100,7 +100,6 @@
         <!-- List user -->
         <a
           href="../list-user/index.html"
-          id="list-user"
           class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
         >
           <!-- icon -->
@@ -144,8 +143,8 @@
         </a>
         <!-- Tools CLI -->
         <a
-          href="../tools-cli/index.html"
-          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
+          href=""
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer"
         >
           <!-- icon -->
           <div class="flex items-center space-x-2">
@@ -165,8 +164,8 @@
         </a>
         <!-- Tools web -->
         <a
-          href=""
-          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer"
+          href="../tools-web/index.html"
+          class="flex justify-between items-center px-6 py-3 text-sm text-gray-300"
         >
           <!-- icon -->
           <div class="flex items-center space-x-2">
@@ -227,217 +226,142 @@
         <a href="../list-admin/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List admin</a>
         <a href="../list-user/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">List user</a>
         <a href="../token-login/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Token login</a>
-        <a href="../tools-cli/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools cli</a>
-        <a href="" class="bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools web</a>
+        <a href="" class="bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools cli</a>
+        <a href="../tools-web/index.html" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Tools web</a>
         <a href="" class="hover:bg-secondary-orange py-2 w-full text-center  rounded-sm text-opacity-60 transition-all">Checkout</a>
       </div>
     </div>
     <!-- end responsive -->
 
     <!-- container -->
-    <div id="web-container" class="content h-screen w-custom-sidebar absolute z-10 lg:ml-96 px-10">
+    <div id="cli-container" class="content h-screen w-custom-sidebar absolute z-10 lg:ml-96 px-10">
       <div id="dashboard-content">
-        <!-- web tools cli -->
-        <div id="toolsweb-content" class="content my-10">
-          <button
-            id="add-web-btn"
-            class="px-10 py-3 bg-green-700 rounded-md text-gray-200"
-          >
-            Add
-          </button>
-          <!-- tabel -->
-          <table class="w-full table-auto shadow-xl mt-4">
-            <thead class="text-center">
-              <tr class="bg-gradient-to-br from-primary-light to-primary-dark">
-                <th class="px-4 py-2">
-                  <span class="text-gray-300">No</span>
-                </th>
-                <th class="px-12 py-2">
-                  <span class="text-gray-300">Name</span>
-                </th>
-                <th class="px-12 py-2">
-                  <span class="text-gray-300">Version</span>
-                </th>
-                <th class="px-12 py-2">
-                  <span class="text-gray-300">Status</span>
-                </th>
-                <th class="px-12 py-2">
-                  <span class="text-gray-300">Author</span>
-                </th>
-                <th class="px-12 py-2">
-                  <span class="text-gray-300">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="bg-gray-200 text-center">
-              <tr class="bg-white border-4 border-gray-200">
-                <td class="py-3">
-                  <span class="font-semibold">1</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Hairul wardi</span>
-                </td>
-                <td class="px-16 py-2">
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td>
-                  <span class="font-semibold">Lorem ipsum</span>
-                </td>
-                <td class="flex space-x-2 justify-center items-center">
-                  <button class="bg-red-500 px-6 py-2 text-gray-300 rounded-md">
-                    Hapus
-                  </button>
-                  <a href="./edit-web.html">
-                    <button
-                      class="bg-green-500 px-6 py-1 text-gray-300 rounded-md"
-                    >
-                      Edit
-                    </button>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal web -->
-    <div
-      id="modal-web"
-      class="lg:w-3/4 w-full bg-black h-screen bg-opacity-80 fixed right-0 top-0 z-40 flex justify-center items-center invisible px-10"
-    >
-      <div class="bg-gray-50 rounded-2xl p-12 relative w-full lg:w-3/5">
-        <!-- close -->
-        <svg
-          id="close-web"
-          class="w-6 h-6 absolute top-8 right-8 cursor-pointer z-50"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
+        <!-- maintenace tools cli -->
         <form action="" class="mt-10 flex flex-col w-full space-y-2">
-          <!-- email & fullname -->
-          <div
-            class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
-          >
-            <div class="flex flex-col w-full">
-              <label
-                for="name"
-                class="font-normal cursor-pointer text-primary-dark"
-                >Name</label
-              >
-              <input
-                type="text"
-                id="name"
-                placeholder="name"
-                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-              />
-            </div>
-            <div class="flex flex-col w-full">
-              <label
-                for="version"
-                class="font-normal cursor-pointer text-primary-dark"
-                >Version</label
-              >
-              <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-          </div>
-          <!-- email & fullname -->
-          <div
-            class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
-          >
-            <div class="flex flex-col w-full">
-              <label
-                for="fullname"
-                class="font-normal cursor-pointer text-primary-dark"
-                >Status</label
-              >
-              <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-            <div class="flex flex-col w-full">
-              <label
-                for="fullname"
-                class="font-normal cursor-pointer text-primary-dark"
-                >Author</label
-              >
-              <input
-                type="text"
-                id="fullname"
-                placeholder="fullname"
-                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-              />
-            </div>
-          </div>
-          <div class="flex flex-col">
-            <label
-              for="email"
-              class="font-normal cursor-pointer text-primary-dark"
-              >Link download</label
+            <!-- email & fullname -->
+            <div
+              class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
             >
-            <input
-              type="text"
-              id="email"
-              placeholder="email"
-              class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
-            />
-          </div>
-
-          <!-- token -->
-          <div class="flex flex-col">
-            <label
-              for="token"
-              class="font-normal cursor-pointer text-primary-dark"
-              >Thumbnail</label
-            >
-            <div class="flex">
-              <input
-                type="file"
-                id="input-web"
-                placeholder="token"
-                class="mt-2 bg-transparent"
-              />
-              <div
-                id="input-web-container"
-                class="w-2/4 h-36 border-2 border-gray-400 flex justify-center items-center overflow-hidden"
-              >
-                <img id="web-preview" src="" class="w-full hidden" alt="" />
-                <span id="text-web">Image preview</span>
+              <div class="flex flex-col w-full">
+                <label
+                  for="name"
+                  class="font-normal cursor-pointer text-primary-dark"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="name"
+                  class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+                />
+              </div>
+              <div class="flex flex-col w-full">
+                <label
+                  for="version"
+                  class="font-normal cursor-pointer text-primary-dark"
+                  >Version</label
+                >
+                <input
+                  type="text"
+                  id="version"
+                  placeholder="version"
+                  class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+                />
               </div>
             </div>
-            <!-- submit -->
-            <button
-              class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium"
+            <!-- email & fullname -->
+            <div
+              class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
             >
-              Register
-            </button>
-          </div>
-        </form>
+              <div class="flex flex-col w-full">
+                <label
+                  for="fullname"
+                  class="font-normal cursor-pointer text-primary-dark"
+                  >Status</label
+                >
+                <select class="py-3 px-4 rounded-md mt-2 bg-gray-200">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="flex flex-col w-full">
+                <label
+                  for="fullname"
+                  class="font-normal cursor-pointer text-primary-dark"
+                  >Author</label
+                >
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="fullname"
+                  class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <label
+                for="email"
+                class="font-normal cursor-pointer text-primary-dark"
+                >Link download</label
+              >
+              <input
+                type="text"
+                id="email"
+                placeholder="email"
+                class="focus:outline-none py-3 px-4 rounded-md mt-2 bg-gray-200"
+              />
+            </div>
+  
+            <!-- token -->
+            <div class="lg:flex flex-col">
+              <div class="flex flex-col">
+                <div
+                  id="input-cli-container"
+                  class="w-2/6 h-40 border-2 border-gray-400 flex justify-center items-center overflow-hidden mt-6"
+                >
+                  <img id="cli-preview" src="" class="w-full hidden" alt="" />
+                  <span id="text-cli">Image preview</span>
+                </div>
+                <input
+                  type="file"
+                  id="input-cli"
+                  placeholder="token"
+                  class="mt-2 bg-transparent"
+                />
+              </div>
+              <!-- submit -->
+              <button
+                class="py-3 px-4 rounded-md bg-secondary-orange hover:bg-secondary-darkorange mt-6 text-gray-200 hover:text-gray-400 font-medium"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+        <!-- end maintenance cli -->
       </div>
     </div>
 
     <!-- script -->
-    <script src="./script.js"></script>
+    <script>
+        // file reader
+        const inputCli = document.getElementById('input-cli')
+        const cliPreview = document.getElementById('cli-preview')
+        const textCli = document.getElementById('text-cli')
+        inputCli.addEventListener('change', function() {
+            const file = this.files[0]
+            if(file) {
+                const reader = new FileReader()
+                textCli.classList.add('hidden')
+                cliPreview.classList.remove('hidden')
+                reader.addEventListener('load', function() {
+                    cliPreview.setAttribute('src', this.result)
+                })
+                reader.readAsDataURL(file)
+            }
+        })
+    </script>
   </body>
 </html>
