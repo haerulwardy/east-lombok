@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind config -->
     <link rel="stylesheet" href="../../../../public/css/tailwind.css" />
-    <title>Tools web</title>
+    <title>Edit tools web</title>
   </head>
   <body class="bg-gray-50">
     <!-- sidebar -->
@@ -165,7 +165,7 @@
         </a>
         <!-- Tools web -->
         <a
-          href=""
+          href="./index.html"
           class="flex justify-between items-center px-6 py-3 text-sm text-gray-300 bg-primary-footer"
         >
           <!-- icon -->
@@ -235,13 +235,13 @@
     <!-- end responsive -->
 
     <!-- container -->
-    <div id="web-container" class="content h-screen w-custom-sidebar absolute z-10 lg:ml-96 px-10">
+    <div id="web-container" class="content h-screen lg:w-custom-sidebar w-full absolute z-10 lg:ml-96 px-10">
       <div id="dashboard-content">
         <!-- web tools -->
         <form action="" class="mt-10 flex flex-col w-full space-y-2">
             <!-- email & fullname -->
             <div
-              class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
+              class="flex flex-col space-y-4 lg:space-x-4 lg:space-y-0 lg:flex-row justify-between"
             >
               <div class="flex flex-col w-full">
                 <label
@@ -273,7 +273,7 @@
             </div>
             <!-- email & fullname -->
             <div
-              class="flex flex-col space-y-4 space-x-4 lg:space-y-0 lg:flex-row justify-between"
+              class="flex flex-col space-y-4 lg:space-x-4 lg:space-y-0 lg:flex-row justify-between"
             >
               <div class="flex flex-col w-full">
                 <label
@@ -322,7 +322,7 @@
               <div class="flex flex-col">
                 <div
                   id="input-cli-container"
-                  class="w-2/6 h-40 border-2 border-gray-400 flex justify-center items-center overflow-hidden mt-6"
+                  class="lg:w-2/6 w-full h-40 border-2 border-gray-400 flex justify-center items-center overflow-hidden mt-6"
                 >
                   <img id="web-preview" src="" class="w-full hidden" alt="" />
                   <span id="text-web">Image preview</span>
@@ -366,6 +366,15 @@ inputWeb.addEventListener('change', function() {
         })
         reader.readAsDataURL(file)
     }
+})
+
+// top bar
+const topbarIcon = document.getElementById('topbar-icon')
+const menubarDown = document.getElementById('menubar-down') 
+
+topbarIcon.addEventListener('click', function() {
+    menubarDown.classList.toggle('hidden')
+    menubarDown.classList.toggle('transform')
 })
     </script>
   </body>
